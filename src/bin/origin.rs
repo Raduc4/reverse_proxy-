@@ -94,7 +94,7 @@ fn main() {
         println!("Len is {}", req_line.get_order_number().len());
 
         if req_line.method() != "GET"
-            || !req_line.path().starts_with("/order/status")
+            || !req_line.path().starts_with("/order/status/")
             || req_line.get_order_number().len() == 0
         {
             if req_line.get_order_number().len() == 0 {
